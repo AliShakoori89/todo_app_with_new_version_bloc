@@ -103,7 +103,7 @@ class _AddTaskFromNetPageState extends State<AddTaskFromNetPage> {
                         fontWeight: FontWeight.w500
                     ),),
                 ),
-                subtitle: Container(
+                subtitle: SizedBox(
                   height: Dimensions.descriptionBoxSize,
                   child: TextFormField(
                     controller: descriptionController,
@@ -128,8 +128,7 @@ class _AddTaskFromNetPageState extends State<AddTaskFromNetPage> {
                 width: double.infinity,
                 child: ElevatedButton(
                   style:  ElevatedButton.styleFrom(
-                    elevation: 1,
-                      primary: Colors.white),
+                    elevation: 1, backgroundColor: Colors.white),
                   child: Text("Submit",
                   style: TextStyle(fontWeight: FontWeight.w700,
                   fontSize: Dimensions.fontSmallSize,

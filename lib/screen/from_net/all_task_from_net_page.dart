@@ -186,9 +186,9 @@ class _AllTaskFromNetPageState extends State<AllTaskFromNetPage> {
                   );
                 }
                 if (state.status.isError) {
-                  return Center();
+                  return const Center();
                 } else {
-                  return Center();
+                  return const Center();
                 }
               },
             ),

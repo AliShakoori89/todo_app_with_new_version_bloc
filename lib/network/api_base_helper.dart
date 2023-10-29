@@ -1,4 +1,3 @@
-import 'dart:convert';
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -40,7 +39,7 @@ class ApiBaseHelper {
   }
 
   Future<dynamic> put(String url, int id, bool done) async{
-    var responseJson;
+    http.Response responseJson;
     try {
       final response = await http.put(
         Uri.parse("$_baseUrl$url?id=$id&done=$done"),
@@ -54,7 +53,7 @@ class ApiBaseHelper {
   }
 
   Future<dynamic> delete(String url, int id) async {
-    var apiResponse;
+    http.Response apiResponse;
     try {
       final response = await http.put(
           Uri.parse("$_baseUrl$url?id=$id"),
